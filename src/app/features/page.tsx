@@ -41,8 +41,8 @@ export default function FeaturesPage() {
       <Navbar />
       
       <section className="h-[60vh] flex flex-col items-center justify-center text-center px-6 border-b border-[#1E1E30]">
-         <span className="text-[#6C63FF] text-xs font-bold uppercase tracking-[0.2em] mb-6 animate-in fade-in slide-in-from-top-4 duration-700">The Supernova Core</span>
-         <h1 className="text-5xl md:text-7xl font-extrabold gradient-text mb-8 tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">Every Tool. One Platform.</h1>
+         <span className="text-white text-xs font-black uppercase tracking-[0.2em] mb-6 animate-in fade-in slide-in-from-top-4 duration-700">The Supernova Core</span>
+         <h1 className="text-5xl md:text-7xl font-extrabold gradient-text mb-8 tracking-tighter animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 uppercase">Every Tool. One Platform.</h1>
          <p className="text-[#8A8AA0] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed animate-in fade-in duration-700 delay-300">
            Zero fragmentation. Zero compromise. We've unified the most critical career tools into a single, intelligent workspace.
          </p>
@@ -53,14 +53,14 @@ export default function FeaturesPage() {
           <div key={i} className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-24 items-center group`}>
              <div className="flex-1 space-y-8">
                 <div className="relative">
-                   <span className="absolute -top-12 -left-8 text-9xl font-black text-[#1E1E30]/30 select-none group-hover:text-[#6C63FF]/5 transition-colors">{f.num}</span>
-                   <h2 className="text-4xl font-bold relative">{f.title}</h2>
+                   <span className="absolute -top-12 -left-8 text-9xl font-black text-[#1E1E30]/30 select-none group-hover:text-[#10B981]/5 transition-colors">{f.num}</span>
+                   <h2 className="text-4xl font-bold relative text-white">{f.title}</h2>
                 </div>
                 <p className="text-[#8A8AA0] text-lg leading-relaxed">{f.desc}</p>
                 <div className="grid grid-cols-2 gap-y-4 gap-x-8">
                    {f.caps.map((cap, j) => (
                      <div key={j} className="flex items-center gap-3 text-sm text-[#EEEEF5]">
-                        <CheckCircle2 size={16} className="text-[#6C63FF] shrink-0" />
+                        <CheckCircle2 size={16} className="text-[#10B981] shrink-0" />
                         {cap}
                      </div>
                    ))}
@@ -68,11 +68,11 @@ export default function FeaturesPage() {
              </div>
              
              <div className="flex-1 w-full relative">
-                <div className="absolute -inset-8 bg-[#6C63FF]/10 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute -inset-8 bg-[#10B981]/10 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative aspect-[4/3] bg-[#0F0F1A] border border-[#1E1E30] rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center p-12">
                    <div className="w-full h-full border border-[#1E1E30] bg-[#161624] rounded-xl flex flex-col items-center justify-center text-[#44445A]">
-                      <Sparkles size={48} className="mb-4 opacity-20" />
-                      <p className="text-xs font-bold tracking-widest uppercase">Live UI Preview</p>
+                      <Sparkles size={48} className="mb-4 opacity-20 text-[#10B981]" />
+                      <p className="text-xs font-bold tracking-widest uppercase text-[#8A8AA0]">Live UI Preview</p>
                    </div>
                 </div>
              </div>
