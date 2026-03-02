@@ -17,7 +17,7 @@ export default function Home() {
           className="w-full h-full opacity-60 scale-110"
         ></iframe>
         {/* Thematic Overlays for Symmetry and Contrast */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.08),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,95,70,0.1),transparent_70%)]" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
       </div>
 
@@ -36,14 +36,14 @@ export default function Home() {
             The AI Platform <br /> That Gets You Hired.
           </h1>
           
-          <p className="text-base md:text-xl text-foreground max-w-2xl leading-relaxed mb-14 font-bold animate-in fade-in duration-1000 delay-300 drop-shadow-md">
+          <p className="text-lg md:text-2xl text-foreground max-w-2xl leading-relaxed mb-14 font-black animate-in fade-in duration-1000 delay-300 drop-shadow-md">
             Enterprise-grade resume analysis. Intelligent job matching. Interview mastery. 
             One unified workspace built for the modern professional.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-5 mb-24 animate-in fade-in duration-1000 delay-500">
             <Link href="/signup">
-              <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs uppercase tracking-widest shadow-[0_0_40px_rgba(16,185,129,0.2)] rounded-xl">
+              <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs uppercase tracking-widest shadow-[0_0_40px_rgba(6,95,70,0.4)] rounded-xl">
                 Start for Free
               </Button>
             </Link>

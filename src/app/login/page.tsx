@@ -56,7 +56,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex flex-col md:flex-row bg-[#07070D]">
       {/* Left Brand Panel */}
       <div className="hidden md:flex flex-col justify-between w-1/2 bg-[#0F0F1A] border-r border-[#1E1E30] p-16 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,rgba(16,185,129,0.1),transparent_50%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,rgba(6,95,70,0.1),transparent_50%)]" />
         
         <div className="relative">
           <Link href="/" className="text-2xl font-bold tracking-tighter gradient-text">SUPERNOVA</Link>
@@ -68,7 +68,7 @@ export default function LoginPage() {
               "Interview intelligence from elite coaches"
             ].map((benefit, i) => (
               <div key={i} className="flex items-center gap-3 text-[#8A8AA0]">
-                <CheckCircle2 size={20} className="text-[#10B981]" />
+                <CheckCircle2 size={20} className="text-primary" />
                 {benefit}
               </div>
             ))}
@@ -101,7 +101,7 @@ export default function LoginPage() {
                 id="email" 
                 type="email" 
                 placeholder="name@company.com" 
-                className="bg-[#0F0F1A] border-[#1E1E30] focus:ring-[#10B981]/30" 
+                className="bg-[#0F0F1A] border-[#1E1E30] focus:ring-primary/30" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
@@ -110,18 +110,18 @@ export default function LoginPage() {
             <div className="space-y-2">
               <div className="flex justify-between items-center">
                 <Label htmlFor="password">Password</Label>
-                <Link href="#" className="text-xs text-[#10B981] hover:underline">Forgot password?</Link>
+                <Link href="#" className="text-xs text-primary hover:underline">Forgot password?</Link>
               </div>
               <Input 
                 id="password" 
                 type="password" 
-                className="bg-[#0F0F1A] border-[#1E1E30] focus:ring-[#10B981]/30" 
+                className="bg-[#0F0F1A] border-[#1E1E30] focus:ring-primary/30" 
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
-            <Button disabled={loading} className="w-full bg-[#10B981] hover:bg-[#059669] text-white font-bold h-11">
+            <Button disabled={loading} className="w-full bg-primary hover:bg-primary/90 text-white font-bold h-11">
               {loading ? <Loader2 className="animate-spin" /> : "Log In"}
             </Button>
           </form>
@@ -142,7 +142,7 @@ export default function LoginPage() {
 
           <p className="text-center text-sm text-[#8A8AA0]">
             New to SUPERNOVA?{" "}
-            <Link href="/signup" className="text-[#10B981] hover:underline font-medium">Create an account</Link>
+            <Link href="/signup" className="text-primary hover:underline font-medium">Create an account</Link>
           </p>
         </div>
       </div>
