@@ -1,7 +1,7 @@
 
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
-import { CheckCircle2, Layout, Sparkles } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
@@ -43,6 +43,12 @@ const features = [
   }
 ];
 
+const fallbackImage = {
+  imageUrl: "https://picsum.photos/seed/fallback/800/600",
+  description: "Career success concept",
+  imageHint: "career success"
+};
+
 export default function FeaturesPage() {
   return (
     <div className="bg-[#07070D]">
@@ -58,7 +64,7 @@ export default function FeaturesPage() {
 
       <section className="max-w-7xl mx-auto px-6 py-32 space-y-48">
         {features.map((f, i) => {
-          const imageData = PlaceHolderImages.find(img => img.id === f.imageId) || PlaceHolderImages[0];
+          const imageData = PlaceHolderImages.find(img => img.id === f.imageId) || PlaceHolderImages[0] || fallbackImage;
           
           return (
             <div key={i} className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-24 items-center group`}>

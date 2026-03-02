@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "interview-success",
+      "description": "Professional man being selected for a job with a 'Congratulations' message bubble",
+      "imageUrl": "https://images.unsplash.com/photo-1770669564689-d3e8ec8d1595?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXJlZCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NzI0Nzk5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hired professional"
+    },
+    {
+      "id": "resume-analysis",
+      "description": "High-tech resume scanning interface with data visualizations",
+      "imageUrl": "https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzcyNDc5OTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data analysis"
+    },
+    {
+      "id": "job-matcher",
+      "description": "Map interface showing job connections across the globe",
+      "imageUrl": "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z2xvYmFsJTIwbmV0d29ya3xlbnwwfHx8fDE3NzI0NjEyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "global network"
+    },
+    {
+      "id": "higher-ed",
+      "description": "A student walking towards a prestigious university campus",
+      "imageUrl": "https://images.unsplash.com/photo-1559135197-8a45ea74d367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc3MjM3NTc1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "university campus"
+    },
+    {
+      "id": "career-intel",
+      "description": "Futuristic dashboard showing career growth projections and skill gaps",
+      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzI0NTY3NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business dashboard"
+    }
+  ]
 }
