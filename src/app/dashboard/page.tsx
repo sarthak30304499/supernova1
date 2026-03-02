@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,11 +24,11 @@ export default function Dashboard() {
 
   return (
     <div className="p-6 md:p-12 max-w-7xl mx-auto space-y-16 animate-in fade-in duration-500">
-      {/* Top Bar - Clean Alignment */}
+      {/* Header - Clean Symmetry */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         <div className="space-y-1">
           <h2 className="text-4xl font-black tracking-tighter">Good morning, John.</h2>
-          <p className="text-muted-foreground text-[10px] font-black uppercase tracking-[0.2em] opacity-60">Monday, October 27, 2025</p>
+          <p className="text-label">Monday, October 27, 2025</p>
         </div>
         <div className="flex items-center gap-4 w-full md:w-auto">
            <div className="flex items-center bg-card border border-border px-5 h-12 rounded-2xl flex-1 md:min-w-[340px] focus-within:ring-2 ring-primary/20 transition-all">
@@ -40,10 +42,10 @@ export default function Dashboard() {
         </div>
       </header>
 
-      {/* Quick Stats - Symmetrical Grid */}
+      {/* Stats Grid - Perfect Alignment */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((stat, i) => (
-          <Card key={i} className="bg-card border-border border-outline card-hover-effect overflow-hidden">
+          <Card key={i} className="bg-card border-border card-hover-effect overflow-hidden">
             <CardContent className="p-8">
               <div className="flex justify-between items-start mb-8">
                 <div className="p-4 bg-primary/10 rounded-2xl">
@@ -53,7 +55,7 @@ export default function Dashboard() {
                   {stat.trend}
                 </Badge>
               </div>
-              <p className="text-muted-foreground text-[10px] font-black uppercase tracking-[0.3em] mb-2">{stat.label}</p>
+              <p className="text-label mb-2">{stat.label}</p>
               <h3 className="text-5xl font-black tracking-tighter">{stat.value}</h3>
             </CardContent>
           </Card>
@@ -61,10 +63,10 @@ export default function Dashboard() {
       </div>
 
       <div className="grid lg:grid-cols-12 gap-12">
-        {/* Workspace Area */}
+        {/* Workspace - Tools Grid */}
         <div className="lg:col-span-8 space-y-12">
           <section>
-             <h3 className="text-2xl font-black mb-8 uppercase tracking-tight">Intelligence Workspace</h3>
+             <h3 className="text-title mb-8">Intelligence Workspace</h3>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {tools.map((tool, i) => (
                   <Card key={i} className="bg-card border-border group card-hover-effect relative overflow-hidden">
@@ -90,13 +92,13 @@ export default function Dashboard() {
              </div>
           </section>
 
-          {/* AI Insight Card - Clean Alignment */}
+          {/* AI CTA Card */}
           <Card className="bg-card border-border border-l-[6px] border-l-primary relative overflow-hidden group">
             <CardContent className="p-12">
                <div className="absolute -top-12 -right-12 p-12 opacity-5 group-hover:opacity-10 transition-opacity">
                  <Zap size={200} className="text-primary" />
                </div>
-               <h3 className="text-2xl font-black mb-6 tracking-tight uppercase">Deep Career Insight</h3>
+               <h3 className="text-title mb-6">Deep Career Insight</h3>
                <p className="text-muted-foreground leading-relaxed max-w-2xl text-base font-medium">
                  "Based on current market trends and your recent resume scan, adding <strong>'System Scalability'</strong> and <strong>'Distributed Computing'</strong> could increase your relevance for Top 10 matching roles by roughly <strong>14%</strong>."
                </p>
@@ -107,11 +109,11 @@ export default function Dashboard() {
           </Card>
         </div>
 
-        {/* Recent & Streak Sidebar */}
+        {/* Sidebar Log & Streak */}
         <div className="lg:col-span-4 space-y-12">
            <Card className="bg-card border-border">
              <CardHeader className="p-10 pb-4">
-                <CardTitle className="text-xl font-black uppercase tracking-tight">Recent Activity</CardTitle>
+                <CardTitle className="text-title">Recent Activity</CardTitle>
              </CardHeader>
              <CardContent className="p-10 space-y-10">
                 {[
@@ -126,7 +128,7 @@ export default function Dashboard() {
                      </div>
                      <div className="flex-1 space-y-1">
                         <p className="text-sm font-black text-foreground truncate">{item.action}</p>
-                        <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">{item.time}</p>
+                        <p className="text-label tracking-widest">{item.time}</p>
                      </div>
                   </div>
                 ))}
@@ -139,7 +141,7 @@ export default function Dashboard() {
                 <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-8 border border-accent/20">
                    <Clock className="text-accent" size={32} />
                 </div>
-                <h4 className="text-[10px] font-black mb-3 uppercase tracking-[0.3em] text-muted-foreground">Practice Streak</h4>
+                <h4 className="text-label mb-3">Practice Streak</h4>
                 <p className="text-6xl font-black mb-4 tracking-tighter">5 Days</p>
                 <p className="text-[11px] text-muted-foreground font-bold leading-relaxed uppercase tracking-widest">Top 5% Global Activity Rank</p>
              </CardContent>
