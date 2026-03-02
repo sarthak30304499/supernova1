@@ -7,10 +7,12 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { CheckCircle2, Loader2, KeyRound } from "lucide-react";
+import { CheckCircle2, Loader2, KeyRound, AlertCircle } from "lucide-react";
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously } from "firebase/auth";
 import { useAuth } from "@/firebase";
 import { useToast } from "@/hooks/use-toast";
+
+const GUEST_ACCESS_CODE = "299792458";
 
 export default function LoginPage() {
   const auth = useAuth();
@@ -21,8 +23,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [showGuestInput, setShowGuestInput] = useState(false);
   const [guestCode, setGuestCode] = useState("");
-
-  const GUEST_ACCESS_CODE = "299792458";
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -58,23 +58,47 @@ export default function LoginPage() {
   };
 
   const handleGuestLogin = async () => {
-    if (guestCode !== GUEST_ACCESS_CODE) {
+    // Basic validation
+    if (!guestCode || guestCode.trim() !== GUEST_ACCESS_CODE) {
       toast({
         title: "Invalid Access Code",
-        description: "Please check your guest credentials and try again.",
+        description: "The code you entered is incorrect. Please double-check and try again.",
         variant: "destructive",
       });
       return;
     }
-    if (!auth) return;
+
+    if (!auth) {
+      toast({
+        title: "System Error",
+        description: "Firebase authentication service is not ready.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setLoading(true);
     try {
+      // Attempt anonymous sign-in
       await signInAnonymously(auth);
+      
+      toast({
+        title: "Access Granted",
+        description: "Welcome! Redirecting to your guest dashboard...",
+      });
+
       router.push("/dashboard");
     } catch (error: any) {
+      console.error("Firebase Guest Login Error:", error);
+      
+      let message = error.message;
+      if (error.code === 'auth/operation-not-allowed') {
+        message = "Anonymous authentication is not enabled in the Firebase Console. Please enable it under Auth Providers.";
+      }
+
       toast({
         title: "Guest access failed",
-        description: error.message,
+        description: message,
         variant: "destructive",
       });
     } finally {
@@ -157,19 +181,27 @@ export default function LoginPage() {
               </Button>
             </form>
           ) : (
-            <div className="space-y-4 animate-in fade-in slide-in-from-top-4 duration-300">
+            <div className="space-y-6 animate-in fade-in slide-in-from-top-4 duration-300">
+              <div className="bg-accent/5 border border-accent/20 rounded-2xl p-6 flex items-start gap-4">
+                 <AlertCircle className="text-accent shrink-0 mt-1" size={20} />
+                 <div>
+                    <h4 className="text-sm font-black uppercase tracking-widest text-accent mb-1">Guest Portal</h4>
+                    <p className="text-xs text-muted-foreground leading-relaxed">Please enter the 9-digit authorization code provided to you for early access.</p>
+                 </div>
+              </div>
               <div className="space-y-2">
                 <Label htmlFor="guestCode">Access Code</Label>
                 <Input 
                   id="guestCode" 
                   type="text" 
-                  placeholder="Enter guest access code..." 
-                  className="bg-[#0F0F1A] border-[#1E1E30] focus:ring-accent/30 text-center font-bold tracking-widest h-12" 
+                  placeholder="000 000 000" 
+                  className="bg-[#0F0F1A] border-[#1E1E30] focus:ring-accent/30 text-center font-bold tracking-[0.5em] h-14 text-xl" 
                   value={guestCode}
                   onChange={(e) => setGuestCode(e.target.value)}
+                  maxLength={12}
                 />
               </div>
-              <Button onClick={handleGuestLogin} disabled={loading} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-black h-12 uppercase tracking-widest text-xs">
+              <Button onClick={handleGuestLogin} disabled={loading} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-black h-12 uppercase tracking-widest text-xs shadow-lg shadow-accent/10">
                 {loading ? <Loader2 className="animate-spin" /> : "Verify & Enter"}
               </Button>
               <button 
