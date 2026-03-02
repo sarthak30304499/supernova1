@@ -113,7 +113,6 @@ export default function Home() {
         <section className="py-40 px-6 border-y border-border bg-card/5 backdrop-blur-sm relative">
           <div className="max-w-7xl mx-auto">
             <div className="mb-24 text-center">
-              <span className="bg-white text-black px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.4em] border border-white">The Infrastructure</span>
               <h2 className="text-4xl md:text-6xl font-black mt-10 tracking-tighter uppercase text-accent">Intelligent Workflow.</h2>
             </div>
             
