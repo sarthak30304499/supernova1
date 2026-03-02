@@ -18,7 +18,7 @@ export default function Home() {
         ></iframe>
         {/* Thematic Overlays for Symmetry and Contrast */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.08),transparent_70%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background" />
       </div>
 
       <div className="relative z-10">
@@ -32,7 +32,7 @@ export default function Home() {
             <ArrowRight size={12} className="ml-1" />
           </div>
 
-          <h1 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter gradient-text leading-[1.0] mb-8 max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100 uppercase">
+          <h1 className="text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter gradient-text leading-[0.9] mb-8 max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100 uppercase drop-shadow-2xl">
             The AI Platform <br /> That Gets You Hired.
           </h1>
           

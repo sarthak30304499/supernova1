@@ -41,7 +41,8 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-accent to-destructive;
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-[#10B981] via-[#FBBF24] to-[#EF4444];
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
 }
 
 .card-hover-effect {
