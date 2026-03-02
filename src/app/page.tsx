@@ -36,7 +36,7 @@ export default function Home() {
             The AI Platform <br /> That Gets You Hired.
           </h1>
           
-          <p className="text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-14 font-medium animate-in fade-in duration-1000 delay-300">
+          <p className="text-base md:text-xl text-foreground max-w-2xl leading-relaxed mb-14 font-bold animate-in fade-in duration-1000 delay-300 drop-shadow-md">
             Enterprise-grade resume analysis. Intelligent job matching. Interview mastery. 
             One unified workspace built for the modern professional.
           </p>
@@ -113,7 +113,7 @@ export default function Home() {
         <section className="py-40 px-6 border-y border-border bg-card/5 backdrop-blur-sm relative">
           <div className="max-w-7xl mx-auto">
             <div className="mb-24 text-center">
-              <span className="bg-primary/10 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.4em] border border-primary/20">The Infrastructure</span>
+              <span className="bg-white text-black px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-[0.4em] border border-white">The Infrastructure</span>
               <h2 className="text-4xl md:text-6xl font-black mt-10 tracking-tighter uppercase text-accent">Intelligent Workflow.</h2>
             </div>
             
