@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden selection:bg-primary/30">
-      {/* Spline 3D Background Model - Non-interactive background */}
+      {/* Spline 3D Background Model - Interaction Disabled */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <iframe 
           src="https://my.spline.design/blackhole-v83RYQb3QhJD3PxvCz5eHBbp/" 
@@ -113,7 +113,7 @@ export default function Home() {
         <section className="py-40 px-6 border-y border-border bg-card/5 backdrop-blur-sm relative">
           <div className="max-w-7xl mx-auto">
             <div className="mb-24 text-center">
-              <h2 className="text-4xl md:text-6xl font-black mt-10 tracking-tighter uppercase text-accent">Intelligent Workflow.</h2>
+              <h2 className="text-5xl md:text-8xl font-black mt-10 tracking-tighter uppercase text-3d-yellow">Intelligent Workflow.</h2>
             </div>
             
             <div className="grid md:grid-cols-3 gap-12">

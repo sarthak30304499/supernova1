@@ -10,7 +10,7 @@
     --card-foreground: 0 0% 95%;
     --popover: 0 0% 5%;
     --popover-foreground: 0 0% 95%;
-    --primary: 161 94% 20%; /* Dark Forest Green */
+    --primary: 161 94% 15%; /* Bold Dark Green */
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 95%;
@@ -22,7 +22,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 12%;
     --input: 0 0% 12%;
-    --ring: 161 94% 25%;
+    --ring: 161 94% 20%;
     --radius: 1rem;
   }
 }
@@ -41,8 +41,8 @@
 }
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-br from-[#065f46] via-[#FBBF24] to-[#EF4444];
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-[#059669] via-[#FBBF24] to-[#EF4444];
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.6));
 }
 
 .card-hover-effect {
@@ -51,6 +51,23 @@
 
 .glass-nav {
   @apply bg-background/70 backdrop-blur-xl border-b border-border/50 sticky top-0 z-[100];
+}
+
+.text-3d-yellow {
+  color: #FBBF24;
+  text-shadow: 
+    0 1px 0 #92400E,
+    0 2px 0 #92400E,
+    0 3px 0 #92400E,
+    0 4px 0 #92400E,
+    0 5px 0 #92400E,
+    0 6px 1px rgba(0,0,0,0.1),
+    0 0 5px rgba(0,0,0,0.1),
+    0 1px 3px rgba(0,0,0,0.3),
+    0 3px 5px rgba(0,0,0,0.2),
+    0 5px 10px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.2),
+    0 20px 20px rgba(0,0,0,0.15);
 }
 
 /* Hero Special Glow */
