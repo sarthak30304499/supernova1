@@ -1,16 +1,16 @@
 {
   "placeholderImages": [
     {
-      "id": "interview-success",
-      "description": "Professional man being selected for a job with a 'Congratulations' message bubble",
-      "imageUrl": "https://images.unsplash.com/photo-1770669564689-d3e8ec8d1595?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXJlZCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NzI0Nzk5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "hired professional"
-    },
-    {
       "id": "resume-analysis",
       "description": "High-tech resume scanning interface with data visualizations",
       "imageUrl": "https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzcyNDc5OTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "data analysis"
+    },
+    {
+      "id": "interview-success",
+      "description": "Professional man being selected for a job with a 'Congratulations' message bubble",
+      "imageUrl": "https://images.unsplash.com/photo-1770669564689-d3e8ec8d1595?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXJlZCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NzI0Nzk5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hired professional"
     },
     {
       "id": "job-matcher",

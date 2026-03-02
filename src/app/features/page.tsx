@@ -64,7 +64,7 @@ export default function FeaturesPage() {
 
       <section className="max-w-7xl mx-auto px-6 py-32 space-y-48">
         {features.map((f, i) => {
-          const imageData = PlaceHolderImages.find(img => img.id === f.imageId) || PlaceHolderImages[0] || fallbackImage;
+          const imageData = PlaceHolderImages.find(img => img.id === f.imageId) || fallbackImage;
           
           return (
             <div key={i} className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-24 items-center group`}>
@@ -86,7 +86,7 @@ export default function FeaturesPage() {
                
                <div className="flex-1 w-full relative [perspective:2000px]">
                   <div className="absolute -inset-8 bg-[#10B981]/10 rounded-[40px] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative aspect-[4/3] bg-[#0F0F1A] border border-[#1E1E30] rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 group-hover:[transform:rotateY(12deg)_rotateX(6deg)_scale(1.02)] group-hover:shadow-[0_40px_100px_rgba(16,185,129,0.2)]">
+                  <div className="relative aspect-[4/3] bg-[#0F0F1A] border border-[#1E1E30] rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 group-hover:[transform:rotateY(12deg)_rotateX(6deg)_scale(1.02)] group-hover:shadow-[0_40px_100px_rgba(16,185,129,0.20)]">
                      <div className="w-full h-full relative">
                         <Image 
                           src={imageData.imageUrl} 
