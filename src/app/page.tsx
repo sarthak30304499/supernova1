@@ -7,37 +7,15 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background relative overflow-x-hidden">
-      {/* Enhanced Video Background Layer */}
-      <div className="fixed inset-0 -z-20 pointer-events-none select-none overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <iframe 
-            style={{ 
-              position: 'absolute', 
-              top: '50%', 
-              left: '50%', 
-              width: '177.77vh', 
-              height: '56.25vw', 
-              minWidth: '100%', 
-              minHeight: '100%', 
-              transform: 'translate(-50%, -50%) scale(1.1)', 
-              border: '0',
-              opacity: '0.45', /* Increased from 0.25 for better visibility */
-              filter: 'contrast(105%) brightness(90%)'
-            }}
-            src="https://go.screenpal.com/player/cOenIMnZhpP?ff=1&ahc=1&dcc=1&tl=1&bg=transparent&share=0&download=0&embed=1&cl=1&autoplay=1&mute=1&loop=1" 
-            allow="autoplay; fullscreen"
-            scrolling="no"
-            title="Supernova Background Video"
-          />
-        </div>
-        {/* Thematic Overlays with increased transparency to show video */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-transparent to-background/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.08),transparent_80%)]" />
+      {/* Background Glows for Depth (No Video) */}
+      <div className="fixed inset-0 -z-10 pointer-events-none select-none overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.05),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(251,191,36,0.03),transparent_50%)]" />
       </div>
 
       <Navbar />
       
-      {/* Hero Section - Optimized Symmetry & Legibility */}
+      {/* Hero Section - Symmetrical & Clean */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-40 flex flex-col items-center justify-center px-6 text-center max-w-7xl mx-auto">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-[11px] font-black uppercase tracking-[0.2em] mb-10 animate-in fade-in slide-in-from-top-4 duration-1000">
           <Zap size={12} className="fill-current" />
@@ -45,18 +23,18 @@ export default function Home() {
           <ArrowRight size={12} className="ml-1" />
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter gradient-text leading-[1.05] mb-8 max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100 drop-shadow-2xl">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter gradient-text leading-[1.05] mb-8 max-w-5xl animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-100">
           The AI Platform That Gets You Hired.
         </h1>
         
-        <p className="text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-14 font-medium animate-in fade-in duration-1000 delay-300 drop-shadow-md">
+        <p className="text-base md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-14 font-medium animate-in fade-in duration-1000 delay-300">
           Enterprise-grade resume analysis. Intelligent job matching. Interview mastery. 
           One platform built for every professional, in every field.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-5 mb-20 animate-in fade-in duration-1000 delay-500">
           <Link href="/signup">
-            <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs uppercase tracking-widest shadow-[0_0_40px_rgba(16,185,129,0.3)]">
+            <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-primary-foreground font-black text-xs uppercase tracking-widest shadow-[0_0_40px_rgba(16,185,129,0.2)]">
               Start for Free
             </Button>
           </Link>
@@ -78,7 +56,7 @@ export default function Home() {
           <div>120+ Countries Active</div>
         </div>
 
-        {/* Hero Mockup - Clean Symmetry */}
+        {/* Dashboard Mockup - Clean Symmetry */}
         <div className="mt-24 w-full rounded-2xl border border-border bg-card/60 backdrop-blur-xl shadow-2xl p-8 relative animate-in fade-in zoom-in-95 duration-1000 delay-1000 overflow-hidden text-left">
            <div className="flex items-center gap-2 mb-8 border-b border-border pb-6">
              <div className="w-3 h-3 rounded-full bg-destructive/40" />
