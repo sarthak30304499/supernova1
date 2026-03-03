@@ -5,8 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Zap, Target, Shield, Users, Globe, ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { Zap, Target, Shield, Globe, ArrowRight, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const founders = [
@@ -14,15 +13,13 @@ const founders = [
     name: "Sarthak Palgotra",
     role: "Co-Founder & Visionary",
     bio: "Driving the core AI intelligence and product vision behind Supernova. Sarthak specializes in neural-matching and user-centric career strategy.",
-    image: "https://picsum.photos/seed/sarthak/400/400",
-    hint: "professional male"
+    linkedin: "https://www.linkedin.com/in/sarthakpalgotra/"
   },
   {
     name: "Mohit",
     role: "Co-Founder & Strategist",
     bio: "Architecting the global operations and growth frameworks. Mohit focuses on market intelligence and ensuring enterprise-grade platform scalability.",
-    image: "https://picsum.photos/seed/mohit/400/400",
-    hint: "professional male"
+    linkedin: "https://www.linkedin.com/in/mohith-kumar-s-a18b6230b/"
   }
 ];
 
@@ -80,26 +77,24 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
              {founders.map((founder, i) => (
                <Card key={i} className="bg-[#0F0F1A] border-border overflow-hidden card-hover-effect">
-                 <CardContent className="p-0">
-                    <div className="relative aspect-square w-full">
-                       <Image 
-                         src={founder.image} 
-                         alt={founder.name}
-                         fill
-                         className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                         data-ai-hint={founder.hint}
-                       />
-                       <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F1A] via-transparent to-transparent" />
-                    </div>
-                    <div className="p-10 space-y-4">
+                 <CardContent className="p-10 space-y-6">
+                    <div className="flex justify-between items-start">
                        <div>
                          <h4 className="text-2xl font-black text-white tracking-tight">{founder.name}</h4>
                          <p className="text-primary text-xs font-black uppercase tracking-widest mt-1">{founder.role}</p>
                        </div>
-                       <p className="text-sm text-[#8A8AA0] leading-relaxed font-medium">
-                         {founder.bio}
-                       </p>
+                       <Link 
+                        href={founder.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="p-3 bg-muted rounded-xl text-[#8A8AA0] hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                       >
+                         <Linkedin size={24} />
+                       </Link>
                     </div>
+                    <p className="text-sm text-[#8A8AA0] leading-relaxed font-medium">
+                      {founder.bio}
+                    </p>
                  </CardContent>
                </Card>
              ))}
@@ -132,11 +127,13 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter mb-10 relative z-10">
                 Join us in the <br /><span className="gradient-text">Future of Work.</span>
               </h2>
-              <Link href="/signup" className="relative z-10">
-                 <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest text-xs rounded-xl shadow-2xl shadow-primary/20">
-                    Get Started Now <ArrowRight size={16} className="ml-2" />
-                 </Button>
-              </Link>
+              <div className="relative z-10">
+                 <Link href="/signup">
+                    <Button size="lg" className="h-16 px-12 bg-primary hover:bg-primary/90 text-white font-black uppercase tracking-widest text-xs rounded-xl shadow-2xl shadow-primary/20">
+                        Get Started Now <ArrowRight size={16} className="ml-2" />
+                    </Button>
+                 </Link>
+              </div>
            </div>
         </section>
       </main>
