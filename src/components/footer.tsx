@@ -33,7 +33,7 @@ export function Footer() {
           <h4 className="text-[#EEEEF5] font-semibold mb-6 text-sm">Company</h4>
           <ul className="space-y-4 text-sm text-[#8A8AA0]">
             <li><Link href="/about" className="hover:text-[#EEEEF5]">About Us</Link></li>
-            <li><Link href="#" className="hover:text-[#EEEEF5]">Careers</Link></li>
+            <li><Link href="/careers" className="hover:text-[#EEEEF5]">Careers</Link></li>
             <li><Link href="#" className="hover:text-[#EEEEF5]">Privacy Policy</Link></li>
             <li><Link href="#" className="hover:text-[#EEEEF5]">Terms of Service</Link></li>
           </ul>
