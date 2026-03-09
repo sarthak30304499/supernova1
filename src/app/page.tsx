@@ -10,7 +10,7 @@ export default function Home() {
       {/* Spline 3D Background Model - Interaction Disabled */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <iframe
-          src="https://my.spline.design/blackhole-v83RYQb3QhJD3PxvCz5eHBbp/"
+          src="https://my.spline.design/blackhole-KZLxtxV49QP6rjCCgFCMUiNB/"
           frameBorder="0"
           width="100%"
           height="100%"
