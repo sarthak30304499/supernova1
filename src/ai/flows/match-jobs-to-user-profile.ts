@@ -67,6 +67,7 @@ const prompt = ai.definePrompt({
   name: 'matchJobsToUserProfilePrompt',
   input: { schema: MatchJobsToUserProfileInputSchema },
   output: { schema: MatchJobsToUserProfileOutputSchema },
+  config: { googleSearchRetrieval: true },
   prompt: `You are an expert career advisor and job matching AI.
 Your task is to analyze a user's resume, their target roles, industry preferences, experience level, and preferred job types to suggest highly relevant job and internship opportunities.
 
@@ -80,10 +81,10 @@ User's Resume:
 {{{resumeText}}}
 """
 
-User's Target Roles: {{{targetRoles.join(', ')}}
-User's Industry Preferences: {{{industryPreferences.join(', ')}}
-User's Experience Level: {{{experienceLevel}}}
-User's Job Type Preferences: {{{jobTypePreferences.join(', ')}}
+User's Target Roles: {{targetRoles}}
+User's Industry Preferences: {{industryPreferences}}
+User's Experience Level: {{experienceLevel}}
+User's Job Type Preferences: {{jobTypePreferences}}
 
 CRITICAL INSTRUCTIONS:
 1. Identify the user's skills and their target roles from the provided resume text.
