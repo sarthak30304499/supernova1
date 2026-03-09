@@ -3,31 +3,31 @@
     {
       "id": "resume-analysis",
       "description": "High-tech resume scanning interface with data visualizations",
-      "imageUrl": "https://images.unsplash.com/photo-1599658880436-c61792e70672?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkYXRhJTIwYW5hbHlzaXN8ZW58MHx8fHwxNzcyNDc5OTM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/features/resume_analysis_ai_1773033023269.png",
       "imageHint": "data analysis"
     },
     {
       "id": "interview-success",
       "description": "Professional man being selected for a job with a 'Congratulations' message bubble",
-      "imageUrl": "https://images.unsplash.com/photo-1770669564689-d3e8ec8d1595?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXJlZCUyMHByb2Zlc3Npb25hbHxlbnwwfHx8fDE3NzI0Nzk5Mzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/features/interview_success_ai_1773033060498.png",
       "imageHint": "hired professional"
     },
     {
       "id": "job-matcher",
       "description": "Map interface showing job connections across the globe",
-      "imageUrl": "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Z2xvYmFsJTIwbmV0d29ya3xlbnwwfHx8fDE3NzI0NjEyNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/features/job_matcher_ai_1773033043770.png",
       "imageHint": "global network"
     },
     {
       "id": "higher-ed",
       "description": "A student walking towards a prestigious university campus",
-      "imageUrl": "https://images.unsplash.com/photo-1559135197-8a45ea74d367?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1bml2ZXJzaXR5JTIwY2FtcHVzfGVufDB8fHx8MTc3MjM3NTc1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/features/higher_ed_ai_1773033081379.png",
       "imageHint": "university campus"
     },
     {
       "id": "career-intel",
       "description": "Futuristic dashboard showing career growth projections and skill gaps",
-      "imageUrl": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzI0NTY3NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/features/career_intel_ai_1773033099327.png",
       "imageHint": "business dashboard"
     }
   ]
